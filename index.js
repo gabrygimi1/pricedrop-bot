@@ -1,36 +1,41 @@
+import TelegramBot from "node-telegram-bot-api";
 import express from "express";
-import { Telegraf } from "telegraf";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const bot = new Telegraf(process.env.BOT_TOKEN);
+// === SERVER EXPRESS PER LA WEBAPP ===
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 
-bot.start((ctx) => {
-  return ctx.reply(
-    "Benvenuto! 👕\nApri il nostro catalogo:",
-    {
-      reply_markup: {
-        inline_keyboard: [
-          [
-            {
-              text: "📱 Apri Catalogo",
-              web_app: {
-                url: process.env.WEBAPP_URL
-              }
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+const PORT = process.env.PORT || 10000;
+app.listen(PORT, () => console.log(`Server attivo su porta ${PORT}`));
+
+// === BOT TELEGRAM ===
+const token = process.env.BOT_TOKEN;
+const bot = new TelegramBot(token, { polling: true });
+
+bot.on("message", (msg) => {
+  const chatId = msg.chat.id;
+
+  bot.sendMessage(chatId, "Apri il catalogo 👇", {
+    reply_markup: {
+      inline_keyboard: [
+        [
+          {
+            text: "🛍️ Apri Catalogo",
+            web_app: {
+              url: "https://pricedrop-bot-rhio.onrender.com"
             }
-          ]
+          }
         ]
-      }
+      ]
     }
-  );
-});
-
-app.post(`/webhook/${process.env.BOT_TOKEN}`, (req, res) => {
-  bot.handleUpdate(req.body);
-  res.status(200).send("ok");
-});
-
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Bot avviato su Render!");
+  });
 });

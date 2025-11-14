@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo Donna / Women</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0f0f0f;
+      color: #fff;
+      font-family: "Poppins", Arial, sans-serif;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1rem;
+      margin: auto;
+      max-width: 420px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin: 0.6rem 0 0.2rem;
+      color: #f1f1f1;
+      max-width: 90%;
+      word-wrap: break-word;
+      line-height: 1.2;
+    }
+
+    .category-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .category, #backButton {
+      background: #1b1b1b;
+      padding: 0.8rem 1.5rem;
+      border-radius: 12px;
+      width: 75%;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+      transition: background 0.2s ease, transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .category:hover, #backButton:hover {
+      background: #292929;
+      transform: scale(1.04);
+    }
+
+    .gallery-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      align-items: center;
+    }
+
+    .product {
+      background: #141414;
+      border-radius: 16px;
+      padding: 0.8rem;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      margin-bottom: 3rem;
+    }
+
+    .product.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.3rem 0.5rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .arrow.left { left: 8px; }
+    .arrow.right { right: 8px; }
+    .arrow:hover { opacity: 0.7; }
+
+    .sizes {
+      font-size: 0.8rem;
+      color: #ccc;
+      margin-bottom: 0.5rem;
+    }
+
+    .filter-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .filter-panel {
+      display: none;
+      position: fixed;
+      top: 60px;
+      right: 10px;
+      background: rgba(50,50,50,0.95);
+      padding: 10px;
+      border-radius: 10px;
+      width: 140px;
+      max-height: 70vh;
+      overflow-y: auto;
+      z-index: 99;
+    }
+    .center-categories {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+    .filter-panel.active { display: block; }
+
+    .filter-panel button {
+      display: inline-block;
+      margin: 3px;
+      padding: 5px 8px;
+      background: none;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .filter-panel button.active {
+      background: #007bff;
+      border-color: #007bff;
+    }
+body.prodotti .container {
+    padding-top: 0 !important;
+}
+
+    .filter-panel #resetFilter {
+      margin-top: 10px;
+      width: 100%;
+      background: #444;
+      border: none;
+      border-radius: 5px;
+      padding: 6px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      .product { margin-bottom: 2.2rem; }
+    }
+	
+  </style>
+</head>
+
+<body>
+<script>
+    function isRealTelegramWebApp() {
+        return (
+            window.Telegram &&
+            Telegram.WebApp &&
+            Telegram.WebApp.platform &&           // piattaforma reale (android, ios, web)
+            Telegram.WebApp.initDataUnsafe &&     // dati utente reali passati da Telegram
+            Telegram.WebApp.initDataUnsafe.user   // utente autenticato
+        );
+    }
+
+    if (!isRealTelegramWebApp()) {
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+
+        document.body.innerHTML = `
+            <div style="
+                background: #000;
+                color: #fff;
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                z-index: 999999;
+            ">
+                This website is only available through Telegram WebApp.<br>
+                Please open it from Telegram.
+            </div>
+        `;
+    }
+</script>
+
+
+  <div class="container">
+    <div id="categories" class="category-container center-categories"></div>
+
+    <div id="gallery" class="gallery-container"></div>
+  </div>
+
+  <button class="filter-btn" id="filterBtn">⚙️</button>
+  <div class="filter-panel" id="filterPanel"></div>
+
+  <script src="data/prodotti_donna.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const categoria = params.get("categoria");
+    const categoriesContainer = document.getElementById("categories");
+    const galleryContainer = document.getElementById("gallery");
+    const filterPanel = document.getElementById("filterPanel");
+    const filterBtn = document.getElementById("filterBtn");
+
+    const categorie = [
+      { it: "Scarpe", en: "Shoes" },
+      { it: "T-Shirt", en: "" },
+      { it: "Felpe", en: "Sweatshirts" },
+      { it: "Pantaloni", en: "Pants" },
+      { it: "Giacche", en: "Jackets" },
+      { it: "Accessori", en: "Accessories" }
+    ];
+
+    filterBtn.addEventListener("click", () => {
+      filterPanel.classList.toggle("active");
+    });
+
+    const sizes = Array.from({ length: 11 }, (_, i) => 35 + i);
+    let activeSizes = [];
+
+    sizes.forEach(size => {
+      const btn = document.createElement("button");
+      btn.textContent = size;
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        if (activeSizes.includes(size)) {
+          activeSizes = activeSizes.filter(s => s !== size);
+        } else {
+          activeSizes.push(size);
+        }
+        aggiornaProdotti();
+      });
+      filterPanel.appendChild(btn);
+    });
+
+    const resetBtn = document.createElement("button");
+    resetBtn.id = "resetFilter";
+    resetBtn.textContent = "Azzera filtri";
+    resetBtn.addEventListener("click", () => {
+      activeSizes = [];
+      document.querySelectorAll(".filter-panel button").forEach(b => b.classList.remove("active"));
+      aggiornaProdotti();
+    });
+    filterPanel.appendChild(resetBtn);
+
+    if (!categoria) {
+      categoriesContainer.innerHTML =
+        categorie.map(cat => {
+          const label = cat.en ? `${cat.it} / ${cat.en}` : cat.it;
+          return `<div class="category" onclick="location.href='donna.html?categoria=${encodeURIComponent(cat.it)}'">${label}</div>`;
+        }).join('') +
+        `<button id="backButton" onclick="window.location.href='index.html'">❮ Torna indietro</button>`;
+      galleryContainer.style.display = "none";
+      filterBtn.style.display = "none";
+    } else {
+      categoriesContainer.style.display = "none";
+      galleryContainer.style.display = "block";
+      filterBtn.style.display = categoria === "Scarpe" ? "block" : "none";
+
+      let prodottiFiltrati = prodottiDonna.filter(p => p.category === categoria);
+      let prodottiMostrati = 0;
+      const prodottiPerCaricamento = 4;
+      window.prodottiCorrenti = [];
+
+      function caricaProdotti() {
+        const nuovi = prodottiFiltrati.slice(prodottiMostrati, prodottiMostrati + prodottiPerCaricamento);
+        nuovi.forEach((p, i) => {
+          const index = window.prodottiCorrenti.length;
+          const div = document.createElement("div");
+          div.className = "product";
+          div.innerHTML = `
+            <div class="slider">
+              <button class="arrow left" onclick="prevImage(${index})">❮</button>
+              <img src="${p.images[0]}" id="img-${index}" alt="${p.name}">
+              <button class="arrow right" onclick="nextImage(${index})">❯</button>
+            </div>
+            <h2>${p.name}</h2>
+            <p class="sizes">${p.sizes.join(", ")}</p>
+          `;
+          galleryContainer.appendChild(div);
+          window.prodottiCorrenti.push(p);
+          setTimeout(() => div.classList.add("visible"), 100);
+        });
+        prodottiMostrati += nuovi.length;
+      }
+
+      function aggiornaProdotti() {
+        galleryContainer.innerHTML = "";
+        prodottiMostrati = 0;
+        window.prodottiCorrenti = [];
+        if (activeSizes.length > 0) {
+          prodottiFiltrati = prodottiDonna.filter(p =>
+            p.category === categoria &&
+            p.sizes.some(size => activeSizes.includes(Math.floor(size)))
+          );
+        } else {
+          prodottiFiltrati = prodottiDonna.filter(p => p.category === categoria);
+        }
+        caricaProdotti();
+      }
+
+      caricaProdotti();
+      window.addEventListener("scroll", () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && prodottiMostrati < prodottiFiltrati.length) {
+          caricaProdotti();
+        }
+      });
+    }
+
+    function nextImage(index) {
+      const product = window.prodottiCorrenti[index];
+      const img = document.getElementById(`img-${index}`);
+      const imgs = product.images;
+      let i = imgs.indexOf(img.src);
+      if (i === -1) {
+        const curr = img.src.split('?')[0];
+        i = imgs.findIndex(u => curr.endsWith(u.split('?')[0]));
+      }
+      img.src = imgs[(i + 1) % imgs.length];
+    }
+
+    function prevImage(index) {
+      const product = window.prodottiCorrenti[index];
+      const img = document.getElementById(`img-${index}`);
+      const imgs = product.images;
+      let i = imgs.indexOf(img.src);
+      if (i === -1) {
+        const curr = img.src.split('?')[0];
+        i = imgs.findIndex(u => curr.endsWith(u.split('?')[0]));
+      }
+      img.src = imgs[(i - 1 + imgs.length) % imgs.length];
+    }
+  </script>
+ 
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const categoria = params.get("categoria");
+
+    // Mostra il pulsante SOLO nella pagina prodotti
+   if (categoria) {
+    document.body.classList.add("prodotti");
+        const backBtn = document.createElement("div");
+        backBtn.className = "back-btn";
+        backBtn.textContent = "⟵ TORNA INDIETRO";
+
+        // UOMO → torna a uomo.html
+        // DONNA → torna a donna.html
+        backBtn.onclick = () => {
+            window.location.href = window.location.pathname;
+        };
+
+        // Inserisci il pulsante PRIMA dei prodotti
+        document.body.insertBefore(backBtn, document.body.firstChild);
+    }
+});
+</script>
+
+<style>
+.back-btn {
+    margin: 1rem auto;
+    width: 15%;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.back-btn:hover {
+    background: #ffffff15;
+}
+</style>
+
+
+</body>
+</html>

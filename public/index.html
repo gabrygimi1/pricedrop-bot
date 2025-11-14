@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catalogo</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #0f0f0f;
+        color: #fff;
+        font-family: "Poppins", Arial, sans-serif;
+        text-align: center;
+        min-height: 100vh;
+    }
+
+    .center-screen {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .category {
+        background: #1b1b1b;
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        width: 75%;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        transition: background 0.2s ease, transform 0.2s ease;
+        cursor: pointer;
+        font-size: 1.2rem;
+    }
+
+    .category:hover {
+        background: #292929;
+        transform: scale(1.04);
+    }
+</style>
+
+</head>
+
+<body>
+<script>
+    function isRealTelegramWebApp() {
+        return (
+            window.Telegram &&
+            Telegram.WebApp &&
+            Telegram.WebApp.platform &&           // piattaforma reale (android, ios, web)
+            Telegram.WebApp.initDataUnsafe &&     // dati utente reali passati da Telegram
+            Telegram.WebApp.initDataUnsafe.user   // utente autenticato
+        );
+    }
+
+    if (!isRealTelegramWebApp()) {
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+
+        document.body.innerHTML = `
+            <div style="
+                background: #000;
+                color: #fff;
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                z-index: 999999;
+            ">
+                This website is only available through Telegram WebApp.<br>
+                Please open it from Telegram.
+            </div>
+        `;
+    }
+</script>
+
+
+<div class="center-screen">
+    <div class="category" onclick="location.href='uomo.html'">UOMO / MEN</div>
+    <div class="category" onclick="location.href='donna.html'">DONNA / WOMEN</div>
+</div>
+
+</body>
+</html>

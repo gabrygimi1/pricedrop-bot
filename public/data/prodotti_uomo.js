@@ -1,0 +1,236 @@
+const prodottiUomo = [
+  // 👟 Scarpe
+  {
+   category: 'Scarpe',
+    name: 'ALEXANDER MCQUEEN OVERSIZED CLEAR',
+    images: [
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20CLEAR%20WHITE%2043/IMG_1728.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQ0xFQVIgV0hJVEUgNDMvSU1HXzE3Mjgud2VicCIsImlhdCI6MTc2Mjk0NjM2MCwiZXhwIjoyMDc4MzA2MzYwfQ.1ZIibIl6QtcfWiL78L-C7OAqaGbLZV4tDXC7pNvtDnw',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20CLEAR%20WHITE%2043/IMG_1725.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQ0xFQVIgV0hJVEUgNDMvSU1HXzE3MjUud2VicCIsImlhdCI6MTc2Mjk0NjM3OCwiZXhwIjoyMDc4MzA2Mzc4fQ.mdM7u-E0fxgj0NTrBQtjMXvwtYCziPj2jeDiKzp3wis',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20CLEAR%20WHITE%2043/IMG_1727.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQ0xFQVIgV0hJVEUgNDMvSU1HXzE3Mjcud2VicCIsImlhdCI6MTc2Mjk0NjM5OSwiZXhwIjoyMDc4MzA2Mzk5fQ.EXX0--w9cXXd979NUtwgk9jsecuUC1dCGxzhtGMI_so',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20CLEAR%20WHITE%2043/IMG_1726.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQ0xFQVIgV0hJVEUgNDMvSU1HXzE3MjYud2VicCIsImlhdCI6MTc2Mjk0NjQyNCwiZXhwIjoyMDc4MzA2NDI0fQ.FkePdpO-NUN3MDuS8SSyKPLxoHNihbeV5pbv7sq5rXE',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20CLEAR%20WHITE%2043/IMG_1729.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQ0xFQVIgV0hJVEUgNDMvSU1HXzE3Mjkud2VicCIsImlhdCI6MTc2Mjk0NjQ0MiwiZXhwIjoyMDc4MzA2NDQyfQ.UiIdcdldXJMJKWkT-LFmYBf8E6JFhVhrnEnD0FN9CG8'
+    ],
+    sizes: [43]
+  },
+  {
+    category: 'Scarpe',
+    name: 'BALENCIAGA SPEED 2.0 BLUE WHITE',
+    images: [
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/BALENCIAGA%20SPEED%20BLUE%2040/IMG_9853.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL0JBTEVOQ0lBR0EgU1BFRUQgQkxVRSA0MC9JTUdfOTg1My53ZWJwIiwiaWF0IjoxNzYyOTQ2NTMxLCJleHAiOjIwNzgzMDY1MzF9.YU3C6-1w2Bu5ycN3WPPRnDaE0JBffyv5R6RoQWxjByQ',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/BALENCIAGA%20SPEED%20BLUE%2040/IMG_9854.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL0JBTEVOQ0lBR0EgU1BFRUQgQkxVRSA0MC9JTUdfOTg1NC53ZWJwIiwiaWF0IjoxNzYyOTQ2NTQ2LCJleHAiOjIwNzgzMDY1NDZ9.ZVFweZnrUtU_MTcCGN3gWsCcqta3c_d3_DUhtsMbaD4',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/BALENCIAGA%20SPEED%20BLUE%2040/IMG_9855.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL0JBTEVOQ0lBR0EgU1BFRUQgQkxVRSA0MC9JTUdfOTg1NS53ZWJwIiwiaWF0IjoxNzYyOTQ2NTYxLCJleHAiOjIwNzgzMDY1NjF9.V1Bj6YMg8iiPPL0CPvom1x5oU8ztwruEEIcn0V36rRY',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/BALENCIAGA%20SPEED%20BLUE%2040/IMG_9856.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL0JBTEVOQ0lBR0EgU1BFRUQgQkxVRSA0MC9JTUdfOTg1Ni53ZWJwIiwiaWF0IjoxNzYyOTQ2NTcyLCJleHAiOjIwNzgzMDY1NzJ9.V5hBIqkKQNAIlswkphmO5ZlUlKF-Cf3zXb8ZxTFV50o',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/BALENCIAGA%20SPEED%20BLUE%2040/IMG_9857.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL0JBTEVOQ0lBR0EgU1BFRUQgQkxVRSA0MC9JTUdfOTg1Ny53ZWJwIiwiaWF0IjoxNzYyOTQ2NTgzLCJleHAiOjIwNzgzMDY1ODN9.b2oaxVnr29YiM2Dhqypdp7B7O4O1ktqGtE4Kvvwv3Ks'
+    ],
+    sizes: [40]
+  },
+  {
+    category: 'Scarpe',
+    name: 'ALEXANDER MCQUEEN OVERSIZED WHITE NAVY PATENT',
+    images: [
+       'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20BLUE%20PATENT%2043/IMG_9859.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQkxVRSBQQVRFTlQgNDMvSU1HXzk4NTkud2VicCIsImlhdCI6MTc2Mjk0NjY5MywiZXhwIjoyMDc4MzA2NjkzfQ.53mqi5sPADibICRfzubRg-MyF2ufRXe5qg4lb0Y6B5s',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20BLUE%20PATENT%2043/IMG_9860.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQkxVRSBQQVRFTlQgNDMvSU1HXzk4NjAud2VicCIsImlhdCI6MTc2Mjk0NjcwNywiZXhwIjoyMDc4MzA2NzA3fQ.PusASj2ErA0PwZz2dGX-zHzERhIPq9hfr3DAlnzHoLw', 
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20BLUE%20PATENT%2043/IMG_9861.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQkxVRSBQQVRFTlQgNDMvSU1HXzk4NjEud2VicCIsImlhdCI6MTc2Mjk0NjcyMywiZXhwIjoyMDc4MzA2NzIzfQ.hm_891CHWDWUwaOfIyFycc-kad_WGAwNCZUm_2D1sBA', 
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20BLUE%20PATENT%2043/IMG_9862.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQkxVRSBQQVRFTlQgNDMvSU1HXzk4NjIud2VicCIsImlhdCI6MTc2Mjk0NjczNSwiZXhwIjoyMDc4MzA2NzM1fQ.cVNwFn7oEhwFyV1t0UJ3Ez-kA6khxPTnL-umiBiAaWU', 'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20BLUE%20PATENT%2043/IMG_9863.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQkxVRSBQQVRFTlQgNDMvSU1HXzk4NjMud2VicCIsImlhdCI6MTc2Mjk0Njc0NiwiZXhwIjoyMDc4MzA2NzQ2fQ.4g9k_kDGf6MwZqmcYkTdvN1hyN-TLT6achnwgMugMGs'
+    ],
+    sizes: [43]
+  },
+  {
+    category: 'Scarpe',
+    name: 'ALEXANDER MCQUEEN OVERSIZED MAN WHITE',
+    images: [
+    'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20WHITE%2047/li8ngeds1rmrwnmfsyzw.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gV0hJVEUgNDcvbGk4bmdlZHMxcm1yd25tZnN5encud2VicCIsImlhdCI6MTc2Mjk3ODgxOSwiZXhwIjoyMDc4MzM4ODE5fQ.NJ-JE5OCszno01CmltKebh8VeZEU0x-UnoaQ-lGSfrs',
+    'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20WHITE%2047/hp47guqixa2ksgzl6gzh.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gV0hJVEUgNDcvaHA0N2d1cWl4YTJrc2d6bDZnemgud2VicCIsImlhdCI6MTc2Mjk3ODgzOSwiZXhwIjoyMDc4MzM4ODM5fQ.SUj8a5YcIKwY2ePYFk1yxnV7-IdLkPmac2hIDLG0E1w',
+    'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20WHITE%2047/k9wylgbhfdhgw73z89zr.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gV0hJVEUgNDcvazl3eWxnYmhmZGhndzczejg5enIud2VicCIsImlhdCI6MTc2Mjk3ODg1MSwiZXhwIjoyMDc4MzM4ODUxfQ.2N96ulj1tPhbAypZdxLx1D3iMukKt5uGZiOszcRcX2A',
+    'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20WHITE%2047/hledpfg2jvlk2tnnxajr.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gV0hJVEUgNDcvaGxlZHBmZzJqdmxrMnRubnhhanIud2VicCIsImlhdCI6MTc2Mjk3ODg2MiwiZXhwIjoyMDc4MzM4ODYyfQ.h4ko20FrsxIQAE1-fOObaFe1okYRevMILsS6hE7UQOE',
+    'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20WHITE%2047/fiwpbojjdcepbgk6g8iw.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gV0hJVEUgNDcvZml3cGJvampkY2VwYmdrNmc4aXcud2VicCIsImlhdCI6MTc2Mjk3ODg3MSwiZXhwIjoyMDc4MzM4ODcxfQ.WNsZqA6PFx_kdJ-3FyLzCarszZ1_wcBhDh_LkeACVnk'  
+    ],
+    sizes: [47]
+  },
+  {
+    category: 'Scarpe',
+    name: 'ALEXANDER MCQUEEN OVERSIZED BLACK',
+    images: [
+       'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20BLACK%2040/IMG_9933.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQkxBQ0sgNDAvSU1HXzk5MzMud2VicCIsImlhdCI6MTc2Mjk0NzIwMCwiZXhwIjoyMDc4MzA3MjAwfQ.TGopxW4Wrg46Y-Z_S-1zPCcyTwwAlMZHJlzt98P5LbA',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20BLACK%2040/IMG_9934.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQkxBQ0sgNDAvSU1HXzk5MzQud2VicCIsImlhdCI6MTc2Mjk0NzIxNywiZXhwIjoyMDc4MzA3MjE3fQ.1oJ10pbx6YlrtIsQwltuIpHWJgrtQrHd55ff0VpLCJs', 
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20BLACK%2040/IMG_9935.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQkxBQ0sgNDAvSU1HXzk5MzUud2VicCIsImlhdCI6MTc2Mjk0NzIyOCwiZXhwIjoyMDc4MzA3MjI4fQ.6ArJJL1axSKM9NNvMuzHzLk-mvzstI1PHZinTZQffd0', 
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20BLACK%2040/IMG_9935.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQkxBQ0sgNDAvSU1HXzk5MzUud2VicCIsImlhdCI6MTc2Mjk0NzI0MiwiZXhwIjoyMDc4MzA3MjQyfQ.Ptr6YEGLXYeMSUh-wIHaLPjyEumIjwiNJKp-kzsfeVU', 
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/MCQUEEN%20BLACK%2040/IMG_9936.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL01DUVVFRU4gQkxBQ0sgNDAvSU1HXzk5MzYud2VicCIsImlhdCI6MTc2Mjk0NzI1NSwiZXhwIjoyMDc4MzA3MjU1fQ.p_ejJ4gcE60p9QUWjLnRlsFzK0nzTn-3BprbSPw8r6o'
+    ],
+    sizes: [40]
+  },
+    {
+    category: 'Scarpe',
+    name: 'BALENCIGA TRIPLE S YELLOW FLUO',
+    images: [
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/BALENCIGA%20TRIPLE%20S%20GIALLO%20FLUO%2044/IMG_1708.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL0JBTEVOQ0lHQSBUUklQTEUgUyBHSUFMTE8gRkxVTyA0NC9JTUdfMTcwOC53ZWJwIiwiaWF0IjoxNzYyOTQ2MTQzLCJleHAiOjIwNzgzMDYxNDN9.D2MF01vgjqvnJ0zZ8qp261rxOjqnysKUPE1EjxpFGSQ', 
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/BALENCIGA%20TRIPLE%20S%20GIALLO%20FLUO%2044/IMG_1704.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL0JBTEVOQ0lHQSBUUklQTEUgUyBHSUFMTE8gRkxVTyA0NC9JTUdfMTcwNC53ZWJwIiwiaWF0IjoxNzYyOTQ2MDI5LCJleHAiOjIwNzgzMDYwMjl9.qP__MD9YR9QUKOIKME0-XCJD53ePeMYhZg0kkac-S0o',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/BALENCIGA%20TRIPLE%20S%20GIALLO%20FLUO%2044/IMG_1706.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL0JBTEVOQ0lHQSBUUklQTEUgUyBHSUFMTE8gRkxVTyA0NC9JTUdfMTcwNi53ZWJwIiwiaWF0IjoxNzYyOTQ2MTAzLCJleHAiOjIwNzgzMDYxMDN9.tEqllZDqAjGy5z_59APipBdQAo-kBefGDw0S4fQw9l4', 
+     'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/BALENCIGA%20TRIPLE%20S%20GIALLO%20FLUO%2044/IMG_1707.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL0JBTEVOQ0lHQSBUUklQTEUgUyBHSUFMTE8gRkxVTyA0NC9JTUdfMTcwNy53ZWJwIiwiaWF0IjoxNzYyOTQ2MTMxLCJleHAiOjIwNzgzMDYxMzF9._rjB1dCT8WnS4mrNrypm1kK_uL5mW0co4f0XHtXqPro', 
+     'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/SCARPE%20UOMO/BALENCIGA%20TRIPLE%20S%20GIALLO%20FLUO%2044/IMG_1709.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1NDQVJQRSBVT01PL0JBTEVOQ0lHQSBUUklQTEUgUyBHSUFMTE8gRkxVTyA0NC9JTUdfMTcwOS53ZWJwIiwiaWF0IjoxNzYyOTQ2MjAzLCJleHAiOjIwNzgzMDYyMDN9.TCGDJvEq9ytwz0dAWVrx4gOCyDY5jFQlNDLrh7jv9yE'
+    ],
+    sizes: ['41 / 44']
+  },
+
+  // 👕 T-Shirt
+    {
+    category: 'T-Shirt',
+    name: 'BALENCIAGA T-SHIRT POLITICAL LOGO WHITE',
+    images: [
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/TSHIRT%20UOMO/BALENCIAGA%20POLITICAL%20LOGO%20WHITE/wjod5ipcichph5njhal7.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1RTSElSVCBVT01PL0JBTEVOQ0lBR0EgUE9MSVRJQ0FMIExPR08gV0hJVEUvd2pvZDVpcGNpY2hwaDVuamhhbDcud2VicCIsImlhdCI6MTc2Mjk4MDA0MCwiZXhwIjoyMDc4MzQwMDQwfQ.BlO_fZeqnJob_rmspkfkTMu4hQ-WWRL7ZPjcEwkpd_8',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/TSHIRT%20UOMO/BALENCIAGA%20POLITICAL%20LOGO%20WHITE/vchhajqpfmuyiqodzdkz.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1RTSElSVCBVT01PL0JBTEVOQ0lBR0EgUE9MSVRJQ0FMIExPR08gV0hJVEUvdmNoaGFqcXBmbXV5aXFvZHpka3oud2VicCIsImlhdCI6MTc2Mjk4MDA2MiwiZXhwIjoyMDc4MzQwMDYyfQ.mO9Bf83DVrl1MvXBGdgHCVA8dQc8QZ3vryjGldmul2w',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/TSHIRT%20UOMO/BALENCIAGA%20POLITICAL%20LOGO%20WHITE/kwiwec367qbql18xlobp.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1RTSElSVCBVT01PL0JBTEVOQ0lBR0EgUE9MSVRJQ0FMIExPR08gV0hJVEUva3dpd2VjMzY3cWJxbDE4eGxvYnAud2VicCIsImlhdCI6MTc2Mjk4MDA3NiwiZXhwIjoyMDc4MzQwMDc2fQ.swmw5FCB_QaoC-D_U3nfSj8LHzkfpKtqmDCJ-VzSxOc'
+    ],
+    sizes: ['S']
+  },
+  {
+    category: 'T-Shirt',
+    name: 'BALENCIAGA T-SHIRT POLITICAL LOGO BLACK',
+    images: [
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/TSHIRT%20UOMO/BALENCIAGA%20POLITICAL%20LOGO%20BLACK/kmut3czr84tnnjr4bqo5.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1RTSElSVCBVT01PL0JBTEVOQ0lBR0EgUE9MSVRJQ0FMIExPR08gQkxBQ0sva211dDNjenI4NHRubmpyNGJxbzUud2VicCIsImlhdCI6MTc2Mjk3OTk5MCwiZXhwIjoyMDc4MzM5OTkwfQ.ktXB9Xmxm1P3WjoeKj4JXELTMgYRJlqkBaf6b0-Man4',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/TSHIRT%20UOMO/BALENCIAGA%20POLITICAL%20LOGO%20BLACK/crdhullzqhvbxhln4i36.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1RTSElSVCBVT01PL0JBTEVOQ0lBR0EgUE9MSVRJQ0FMIExPR08gQkxBQ0svY3JkaHVsbHpxaHZieGhsbjRpMzYud2VicCIsImlhdCI6MTc2Mjk4MDAwMywiZXhwIjoyMDc4MzQwMDAzfQ.OjQE8rwQmVWwP4eZDH_5npY2G5zHRdGf7jVipuBRIi4',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/TSHIRT%20UOMO/BALENCIAGA%20POLITICAL%20LOGO%20BLACK/bfrf21zfqpevle05umj0.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1RTSElSVCBVT01PL0JBTEVOQ0lBR0EgUE9MSVRJQ0FMIExPR08gQkxBQ0svYmZyZjIxemZxcGV2bGUwNXVtajAud2VicCIsImlhdCI6MTc2Mjk4MDAyMCwiZXhwIjoyMDc4MzQwMDIwfQ.3iS3PelOctuQjO5hSRxsvpgaJNn9-fFkdAMYBfiwClk'
+    ],
+    sizes: ['XXS / S']
+  },
+ 
+
+  // 👚 Felpe
+  {
+    category: 'Felpe',
+    name: 'GUCCI FELPA BLIND FOR LOVE BLU GIALLA',
+    images: [
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/FELPE%20UOMO/GUCCI%20G%20BLIND/turgudes7odlrqivnpgw.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0ZFTFBFIFVPTU8vR1VDQ0kgRyBCTElORC90dXJndWRlczdvZGxycWl2bnBndy53ZWJwIiwiaWF0IjoxNzYyOTc4NjM4LCJleHAiOjIwNzgzMzg2Mzh9.tJAhHbUrO1nMfcijdJb6DNwZs4NXm7FSOLCWzLh4g6E', 
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/FELPE%20UOMO/GUCCI%20G%20BLIND/rpmzijkf1mwiaryzotwf.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0ZFTFBFIFVPTU8vR1VDQ0kgRyBCTElORC9ycG16aWprZjFtd2lhcnl6b3R3Zi53ZWJwIiwiaWF0IjoxNzYyOTc4NjU2LCJleHAiOjIwNzgzMzg2NTZ9.F9ArwQ2Q1zH3BX01Sx_w68cSX1XfIqsDkfmc4YuRAeI',     
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/FELPE%20UOMO/GUCCI%20G%20BLIND/bpr1c5ab1br6cq4jph3m.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0ZFTFBFIFVPTU8vR1VDQ0kgRyBCTElORC9icHIxYzVhYjFicjZjcTRqcGgzbS53ZWJwIiwiaWF0IjoxNzYyOTc4Njk1LCJleHAiOjIwNzgzMzg2OTV9._ZWiZFF4dDnuA63ySMa7fGaPJGYrBgQ3Q_Z1j9nV7U0',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/FELPE%20UOMO/GUCCI%20G%20BLIND/le5npyaqjyakarbj8ui4.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0ZFTFBFIFVPTU8vR1VDQ0kgRyBCTElORC9sZTVucHlhcWp5YWthcmJqOHVpNC53ZWJwIiwiaWF0IjoxNzYyOTc4NzA1LCJleHAiOjIwNzgzMzg3MDV9.api8EYNW5H_hYNzcSKnIVdYiVPVDbzG8af_X4UrluAM',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/FELPE%20UOMO/GUCCI%20G%20BLIND/nkjyopnszsjsjomwhbqw.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0ZFTFBFIFVPTU8vR1VDQ0kgRyBCTElORC9ua2p5b3Buc3pzanNqb213aGJxdy53ZWJwIiwiaWF0IjoxNzYyOTc4NzIzLCJleHAiOjIwNzgzMzg3MjN9.CB9DD1naH2IPMvJM47qWRA9b-O5sS4IEyGc3kJSN2F0'
+    ],
+    sizes: ['M']
+  },
+   {
+    category: 'Felpe',
+    name: 'BALENCIAGA WAVE LOGO POPOVER HOODY BLACK',
+    images: [
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/FELPE%20UOMO/BALENCIAGA%20POLITCAL%20LOGO/xxuh5phgjjf1pps4g8cl.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0ZFTFBFIFVPTU8vQkFMRU5DSUFHQSBQT0xJVENBTCBMT0dPL3h4dWg1cGhnampmMXBwczRnOGNsLndlYnAiLCJpYXQiOjE3NjI5Nzk4MDcsImV4cCI6MjA3ODMzOTgwN30._r1Freo54o3CsRE21aY_NK5dtyazPI5PwX7qwPeSX5M',
+        'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/FELPE%20UOMO/BALENCIAGA%20POLITCAL%20LOGO/bjj7kmouwxagzhbl79lw.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0ZFTFBFIFVPTU8vQkFMRU5DSUFHQSBQT0xJVENBTCBMT0dPL2JqajdrbW91d3hhZ3poYmw3OWx3LndlYnAiLCJpYXQiOjE3NjI5Nzk4MTksImV4cCI6MjA3ODMzOTgxOX0.D9zgDc78z8Enwu2LC3kMH0u5X2aF5TP09g_BhdPvqlY',
+        'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/FELPE%20UOMO/BALENCIAGA%20POLITCAL%20LOGO/nrm5bfgxr0h4dfofjun6.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0ZFTFBFIFVPTU8vQkFMRU5DSUFHQSBQT0xJVENBTCBMT0dPL25ybTViZmd4cjBoNGRmb2ZqdW42LndlYnAiLCJpYXQiOjE3NjI5Nzk4NjEsImV4cCI6MjA3ODMzOTg2MX0.Pps3Vq5C-Z9YCa40Z2v0N5NoqdyjPcbnQoaEasAW_ZY',
+        'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/FELPE%20UOMO/BALENCIAGA%20POLITCAL%20LOGO/sarppvwvdpoyzvzl5xfx.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0ZFTFBFIFVPTU8vQkFMRU5DSUFHQSBQT0xJVENBTCBMT0dPL3NhcnBwdnd2ZHBveXp2emw1eGZ4LndlYnAiLCJpYXQiOjE3NjI5Nzk5MjUsImV4cCI6MjA3ODMzOTkyNX0.3ixdDLTk_CbYg1HRzWEcKzoR5EeYJNPZmmwbm44Oi_A'
+       ],
+    sizes: ['M']
+  },
+
+  // 👖 Pantaloni
+  {
+    category: 'Pantaloni',
+    name: 'JEANS ZIP BALENCIAGA',
+    images: [
+        'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/PANTALONI%20UOMO/BALENCIAGA%20ZIP/cbwm4l0vkgjialnpke00.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1BBTlRBTE9OSSBVT01PL0JBTEVOQ0lBR0EgWklQL2Nid200bDB2a2dqaWFsbnBrZTAwLndlYnAiLCJpYXQiOjE3NjI5NzM1NjUsImV4cCI6MjA3ODMzMzU2NX0.0AoiGp93D_NbJ591RRykQwNOid-Ive7Kv78c7Eqom0I',
+        'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/PANTALONI%20UOMO/BALENCIAGA%20ZIP/g5qssnuncnjgxjj3kggy.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1BBTlRBTE9OSSBVT01PL0JBTEVOQ0lBR0EgWklQL2c1cXNzbnVuY25qZ3hqajNrZ2d5LndlYnAiLCJpYXQiOjE3NjI5NzM2NDAsImV4cCI6MjA3ODMzMzY0MH0.kSPDShE_UuXPIVkbjR-yG3SCHiUWdiG_kibJbKbCkD0',
+        'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/PANTALONI%20UOMO/BALENCIAGA%20ZIP/czmbnpspmwweyqsrjzrn.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1BBTlRBTE9OSSBVT01PL0JBTEVOQ0lBR0EgWklQL2N6bWJucHNwbXd3ZXlxc3JqenJuLndlYnAiLCJpYXQiOjE3NjI5NzM2MjEsImV4cCI6MjA3ODMzMzYyMX0._EiCydQD00GTFDGi8btT2LzLCteHbm9LqjtyzvXpTyw',
+        'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/PANTALONI%20UOMO/BALENCIAGA%20ZIP/kz5rawrnu10fmj8xgyqg.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1BBTlRBTE9OSSBVT01PL0JBTEVOQ0lBR0EgWklQL2t6NXJhd3JudTEwZm1qOHhneXFnLndlYnAiLCJpYXQiOjE3NjI5NzM2NzUsImV4cCI6MjA3ODMzMzY3NX0.meXWvJDVgSfIs5PEMFOJqJbqoj9a8lscmXVkl2aLlNk',
+        'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/PANTALONI%20UOMO/BALENCIAGA%20ZIP/lrgrdjp606pdcq3xy9he.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1BBTlRBTE9OSSBVT01PL0JBTEVOQ0lBR0EgWklQL2xyZ3JkanA2MDZwZGNxM3h5OWhlLndlYnAiLCJpYXQiOjE3NjI5NzM2ODcsImV4cCI6MjA3ODMzMzY4N30.bV1ut45mFyuLmTsjtpTYQFKmnXsRMzrk-yMzQX3ZHw4',
+        'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/PANTALONI%20UOMO/BALENCIAGA%20ZIP/mzldjfzlep3a7e1famkk.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1BBTlRBTE9OSSBVT01PL0JBTEVOQ0lBR0EgWklQL216bGRqZnpsZXAzYTdlMWZhbWtrLndlYnAiLCJpYXQiOjE3NjI5NzM3MDQsImV4cCI6MjA3ODMzMzcwNH0.PDvAosltw70YvJJYgXulG5rG79-EcIAtEXqPei12QSs',
+        'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/PANTALONI%20UOMO/BALENCIAGA%20ZIP/tiswpjzjuaeweerxqd5s.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL1BBTlRBTE9OSSBVT01PL0JBTEVOQ0lBR0EgWklQL3Rpc3dwanpqdWFld2VlcnhxZDVzLndlYnAiLCJpYXQiOjE3NjI5NzM3MTcsImV4cCI6MjA3ODMzMzcxN30.09syH0Ba0dJbQ80NsgrvstFd5CZC2pYgWQ1jdHuKrOk'
+    ],
+    sizes: [28]
+  },
+
+  // 🧥 Giacche
+  {
+    category: 'Giacche',
+    name: 'MONCLER DOWN JACKET RED',
+    images: [
+      'https://via.placeholder.com/400x300?text=Moncler+Jacket+1',
+      'https://via.placeholder.com/400x300?text=Moncler+Jacket+2'
+    ],
+    sizes: ['M', 'L', 'XL']
+  },
+
+  // 🕶️ Accessori
+  {
+    category: 'Accessori',
+    name: 'BALENCIAGA TWO-TONE LOGO BASEBALL CAP',
+    images: [
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20TWOTONE/qawgicuxczf0he4twi7g.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgVFdPVE9ORS9xYXdnaWN1eGN6ZjBoZTR0d2k3Zy53ZWJwIiwiaWF0IjoxNzYyOTc2NzcwLCJleHAiOjIwNzgzMzY3NzB9.k_dQbhwNRPq1gTYs8DJ0orq91MRjKIv9WMlVGfHFuOw',  
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20TWOTONE/av3lled2tpu9ow8jwgbi.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgVFdPVE9ORS9hdjNsbGVkMnRwdTlvdzhqd2diaS53ZWJwIiwiaWF0IjoxNzYyOTc2NzM3LCJleHAiOjIwNzgzMzY3Mzd9.4XlA4oeIClIS3iEHnPYl9Q5CrkpKHpe16_zlOVXc76E',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20TWOTONE/pbsxtxumhzxybsmygtff.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgVFdPVE9ORS9wYnN4dHh1bWh6eHlic215Z3RmZi53ZWJwIiwiaWF0IjoxNzYyOTc2NzkzLCJleHAiOjIwNzgzMzY3OTN9.pKfid0Zl6OYYPVXPtVniqi5uzgoWqymtGRGyzj6wiGY',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20TWOTONE/pmbjekrlnkj3qdjyyhlz.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgVFdPVE9ORS9wbWJqZWtybG5rajNxZGp5eWhsei53ZWJwIiwiaWF0IjoxNzYyOTc2ODA1LCJleHAiOjIwNzgzMzY4MDV9.MTeY0M_-0AaQ-hjRFgqYXJV7RsO8rdx_GV4XAx9rEcM',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20TWOTONE/q1tpezfzy7vw4slfrwox.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgVFdPVE9ORS9xMXRwZXpmenk3dnc0c2xmcndveC53ZWJwIiwiaWF0IjoxNzYyOTc2ODE3LCJleHAiOjIwNzgzMzY4MTd9.C9WMrlZoGnSM1sFp8jkQiiHimocpofN24PCdG-swNYM'
+    ],
+    sizes: []
+  },
+  {
+    category: 'Accessori',
+    name: 'GUCCI NY YANKEES CAP BLACK',
+    images: [
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20NY%20YANKEES%20CAP%20BLACK/oajfpolaqoqjqbueojaa.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIE5ZIFlBTktFRVMgQ0FQIEJMQUNLL29hamZwb2xhcW9xanFidWVvamFhLndlYnAiLCJpYXQiOjE3NjI5NzY5MzUsImV4cCI6MjA3ODMzNjkzNX0.kS2QVCPUKrxWLXzTaWbialLPRNGS5SkqXxT56nZvFTA',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20NY%20YANKEES%20CAP%20BLACK/oajfpolaqoqjqbueojaa.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIE5ZIFlBTktFRVMgQ0FQIEJMQUNLL29hamZwb2xhcW9xanFidWVvamFhLndlYnAiLCJpYXQiOjE3NjI5NzY5NDIsImV4cCI6MjA3ODMzNjk0Mn0.tAr-t7yMHfXsaHloESvGgqtGMmwupLjMEuditsBAdIU',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20NY%20YANKEES%20CAP%20BLACK/bnpjfxr0j1rjoelrpddo.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIE5ZIFlBTktFRVMgQ0FQIEJMQUNLL2JucGpmeHIwajFyam9lbHJwZGRvLndlYnAiLCJpYXQiOjE3NjI5NzY5NTgsImV4cCI6MjA3ODMzNjk1OH0.d0AaDy7gapsdEkR1ueFqNwu7SnTUbHpsbvgA37sd87w',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20NY%20YANKEES%20CAP%20BLACK/m4fed5f9ryk89rgtilud.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIE5ZIFlBTktFRVMgQ0FQIEJMQUNLL200ZmVkNWY5cnlrODlyZ3RpbHVkLndlYnAiLCJpYXQiOjE3NjI5NzY5NzAsImV4cCI6MjA3ODMzNjk3MH0.5ehaE8Nc2jI20wwZ_PVTwCNMfMhR4k4YIVqnCOr9rqQ',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20NY%20YANKEES%20CAP%20BLACK/n848iuxrwcvf4shsfcgx.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIE5ZIFlBTktFRVMgQ0FQIEJMQUNLL244NDhpdXhyd2N2ZjRzaHNmY2d4LndlYnAiLCJpYXQiOjE3NjI5NzY5ODcsImV4cCI6MjA3ODMzNjk4N30.Hf6mIyPlxaTUrvTbml0CF_noyK9fNSjBH6ATKwFxBt8'
+    ],
+    sizes: ['L']
+  },
+  {
+    category: 'Accessori',
+    name: 'GUCCI CAP LOGO IVORY',
+    images: [
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20GUCCI%20CAP%20IVORY%20BLACK/jkqbq1tyurvjlec4fity.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEdVQ0NJIENBUCBJVk9SWSBCTEFDSy9qa3FicTF0eXVydmpsZWM0Zml0eS53ZWJwIiwiaWF0IjoxNzYyOTc4NDEwLCJleHAiOjIwNzgzMzg0MTB9.OQ-qZKhSileuUDUrwKsD35dCNpgYwPBo-VrN-VskkIM',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20GUCCI%20CAP%20IVORY%20BLACK/ltsnwpro8kmat9zi3ttw.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEdVQ0NJIENBUCBJVk9SWSBCTEFDSy9sdHNud3BybzhrbWF0OXppM3R0dy53ZWJwIiwiaWF0IjoxNzYyOTc4NDIyLCJleHAiOjIwNzgzMzg0MjJ9.fQMqoUR8qZjgGR4U96K4l2V5TJebNCOMfLEVaoZPrik',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20GUCCI%20CAP%20IVORY%20BLACK/sc3dnkxvi4qxutn4warc.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEdVQ0NJIENBUCBJVk9SWSBCTEFDSy9zYzNkbmt4dmk0cXh1dG40d2FyYy53ZWJwIiwiaWF0IjoxNzYyOTc4NDMyLCJleHAiOjIwNzgzMzg0MzJ9._zxgzWVbB_kBTlvexQmg62e2sNFFH7pWOGzhR5HT7JU',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20GUCCI%20CAP%20IVORY%20BLACK/ywkz4xayzxvvk4ig2gz0.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEdVQ0NJIENBUCBJVk9SWSBCTEFDSy95d2t6NHhheXp4dnZrNGlnMmd6MC53ZWJwIiwiaWF0IjoxNzYyOTc4NDQ1LCJleHAiOjIwNzgzMzg0NDV9.CgJqGuE6sumlBFlEGC8Bxiq6W9lJPy8iWIGiTM9Gv_0',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20GUCCI%20CAP%20IVORY%20BLACK/lwtjsv7uehvqmcsajvtr.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEdVQ0NJIENBUCBJVk9SWSBCTEFDSy9sd3Rqc3Y3dWVodnFtY3NhanZ0ci53ZWJwIiwiaWF0IjoxNzYyOTc4NDY0LCJleHAiOjIwNzgzMzg0NjR9.gb9bMm-K99OauP5YaVBbnHGbe8tudlozxygBREGp2FY',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20GUCCI%20CAP%20IVORY%20BLACK/mxyyn7h797ghzzxw37yj.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEdVQ0NJIENBUCBJVk9SWSBCTEFDSy9teHl5bjdoNzk3Z2h6enh3Mzd5ai53ZWJwIiwiaWF0IjoxNzYyOTc4NDc0LCJleHAiOjIwNzgzMzg0NzR9.Asrl2rBEDjWXd9Y2ySsSI1s_c5LFZe1pFGVNy4-fN3c'
+    ],
+    sizes: []
+  },
+  {
+    category: 'Accessori',
+    name: 'BALENCIAGA LOGO BASEBALL CAP GREY',
+    images: [
+    'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20CAP%20GREY/mqqxu7jkyvptppnwa2w5.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgQ0FQIEdSRVkvbXFxeHU3amt5dnB0cHBud2EydzUud2VicCIsImlhdCI6MTc2Mjk3OTU0MCwiZXhwIjoyMDc4MzM5NTQwfQ.khXsv8i-XLg1uag6lbSg7Fw-CoU6d9_83mX9ve-vuH0',
+    'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20CAP%20GREY/s9v2p8is85zgmphvwxsr.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgQ0FQIEdSRVkvczl2MnA4aXM4NXpnbXBodnd4c3Iud2VicCIsImlhdCI6MTc2Mjk3OTU1MiwiZXhwIjoyMDc4MzM5NTUyfQ.LO4Pf7BYEqnqWGvJuOr-zhdCk2Bdb39zuZEy9gKDT-Y',
+     'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20CAP%20GREY/jbyipoe1uiyxrxrlubsm.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgQ0FQIEdSRVkvamJ5aXBvZTF1aXl4cnhybHVic20ud2VicCIsImlhdCI6MTc2Mjk3OTU2OCwiZXhwIjoyMDc4MzM5NTY4fQ.IaZeooQ9vhZmuLrx_YblnGmLy7wHKfTy5YjPNCIyjPQ',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20CAP%20GREY/fzkg8miyigmj54hj6deb.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgQ0FQIEdSRVkvZnprZzhtaXlpZ21qNTRoajZkZWIud2VicCIsImlhdCI6MTc2Mjk3OTU4MywiZXhwIjoyMDc4MzM5NTgzfQ.5LrvmIK1O0fX8r38e4Yk0Ghl_iO0errj68qMmidG73s',
+      'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20CAP%20GREY/xroocmysc6pcmwaq7o2i.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgQ0FQIEdSRVkveHJvb2NteXNjNnBjbXdhcTdvMmkud2VicCIsImlhdCI6MTc2Mjk3OTYwMiwiZXhwIjoyMDc4MzM5NjAyfQ.46MAoIzj79l7LRKD2Lfh4jWNeCHZcwDrFfEMR2clUcY'
+    ],
+    sizes: ['L']
+  },
+  {
+    category: 'Accessori',
+    name: 'BALENCIAGA DISTRESSED BASEBALL CAP GREEN',
+    images: [
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20DESTROYED%20CPA/uxactdg0eiuqedrwt9je.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgREVTVFJPWUVEIENQQS91eGFjdGRnMGVpdXFlZHJ3dDlqZS53ZWJwIiwiaWF0IjoxNzYyOTgxNjkzLCJleHAiOjIwNzgzNDE2OTN9.kRpAXJfp4A64x1F9l0fkNmW1xYsZ7sAG7kRczLcs0s4',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20DESTROYED%20CPA/sv1uinrfz0zpovyji7bo.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgREVTVFJPWUVEIENQQS9zdjF1aW5yZnowenBvdnlqaTdiby53ZWJwIiwiaWF0IjoxNzYyOTgxNzA0LCJleHAiOjIwNzgzNDE3MDR9.4g9XSWrHW0fuMcuodbuyN9Mc3JaiZ1kIGw-HPaxs9R0',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20DESTROYED%20CPA/impvbll9yld6g3g4fkyb.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgREVTVFJPWUVEIENQQS9pbXB2YmxsOXlsZDZnM2c0Zmt5Yi53ZWJwIiwiaWF0IjoxNzYyOTgxNzE4LCJleHAiOjIwNzgzNDE3MTh9.g5LgqCHBF5yvPCyb93t6wUgRuXu1RMTyGjTFod1OQtc',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20DESTROYED%20CPA/msaeumoeu59shr7p2g10.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgREVTVFJPWUVEIENQQS9tc2FldW1vZXU1OXNocjdwMmcxMC53ZWJwIiwiaWF0IjoxNzYyOTgxNzMxLCJleHAiOjIwNzgzNDE3MzF9.Dp07IbdaPmgHmPRUm9XfaYtQszs82wNPOub_mSag0D0'
+    ],
+    sizes: ['L']
+  },
+  {
+    category: 'Accessori',
+  name: 'BALENCIAGA  HAT LOGO CAP BLACK',
+    images: [
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20BLACK%20LOG%20CAP/rhr3soyowd6l9fd87ssk.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgQkxBQ0sgTE9HIENBUC9yaHIzc295b3dkNmw5ZmQ4N3Nzay53ZWJwIiwiaWF0IjoxNzYyOTgyMjU3LCJleHAiOjIwNzgzNDIyNTd9.dpOacJYCNAGCqTg_xa6ed_gr6vuZONV3BK7lGsFmW-M',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20BLACK%20LOG%20CAP/xxe1fc6jnvmadj9jjcs3.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgQkxBQ0sgTE9HIENBUC94eGUxZmM2am52bWFkajlqamNzMy53ZWJwIiwiaWF0IjoxNzYyOTgyMjY3LCJleHAiOjIwNzgzNDIyNjd9.nCoOKPLJnZFW0fFHuau7_8fCkYoXmlhu6HqsfVS7eO4',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20BLACK%20LOG%20CAP/b7tuln34wabzgn1z6woe.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgQkxBQ0sgTE9HIENBUC9iN3R1bG4zNHdhYnpnbjF6NndvZS53ZWJwIiwiaWF0IjoxNzYyOTgyMjg2LCJleHAiOjIwNzgzNDIyODZ9.shoL68fZ30gJugnapub2G4F8m3dapJl0sQ6RvrcZOD0',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/BALENCIAGA%20BLACK%20LOG%20CAP/mhi6smryfpzjtwcmatmh.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0JBTEVOQ0lBR0EgQkxBQ0sgTE9HIENBUC9taGk2c21yeWZwemp0d2NtYXRtaC53ZWJwIiwiaWF0IjoxNzYyOTgyMjk4LCJleHAiOjIwNzgzNDIyOTh9.e46W_8X2B8urX_R8XW4nNeCPK6082WXw4JTUaBYQbwE'
+    ],
+    sizes: ['L']
+  },
+  {
+    category: 'Accessori',
+    name: 'GUCCI MAN BAG MULTICOLOR GG',
+    images: [
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20BORSELLO%20LGBT/mvsdxuudfrackxi4fjj0.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEJPUlNFTExPIExHQlQvbXZzZHh1dWRmcmFja3hpNGZqajAud2VicCIsImlhdCI6MTc2Mjk4MTgzMCwiZXhwIjoyMDc4MzQxODMwfQ.vzO64SRJSQ1DdgdvpOAD0JqG26VO2IQB3S2mn1xbqio',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20BORSELLO%20LGBT/w7euhei5qkkredt5uj78.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEJPUlNFTExPIExHQlQvdzdldWhlaTVxa2tyZWR0NXVqNzgud2VicCIsImlhdCI6MTc2Mjk4MTg0NywiZXhwIjoyMDc4MzQxODQ3fQ.lBLvNIAp2pNfn3JCD_uDXXDkNFiC7AYYKKTGwXQ8bpY',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20BORSELLO%20LGBT/e06sxmbld10y5g5wnrek.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEJPUlNFTExPIExHQlQvZTA2c3htYmxkMTB5NWc1d25yZWsud2VicCIsImlhdCI6MTc2Mjk4MTg1NywiZXhwIjoyMDc4MzQxODU3fQ.5QoPE564ik16HLTAudZ1TqCd90akX6aqZx58zcLl7Fc',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20BORSELLO%20LGBT/pxzp7isddlg8dz4rv0lo.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEJPUlNFTExPIExHQlQvcHh6cDdpc2RkbGc4ZHo0cnYwbG8ud2VicCIsImlhdCI6MTc2Mjk4MTg3MSwiZXhwIjoyMDc4MzQxODcxfQ.5027tN8cjrcgsJdkvvzbxmw8kEu9L63QPwkMHOzPfC8',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20BORSELLO%20LGBT/vgsnorygp0ihcpy2pfer.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEJPUlNFTExPIExHQlQvdmdzbm9yeWdwMGloY3B5MnBmZXIud2VicCIsImlhdCI6MTc2Mjk4MTkxMCwiZXhwIjoyMDc4MzQxOTEwfQ.tNaVuP7M86xyBc3bmUXgBI7vfbaBX5XhasvldoTMiQc',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20BORSELLO%20LGBT/giw7vjuu1mov4kk9oc09.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEJPUlNFTExPIExHQlQvZ2l3N3ZqdXUxbW92NGtrOW9jMDkud2VicCIsImlhdCI6MTc2Mjk4MTkzMiwiZXhwIjoyMDc4MzQxOTMyfQ.8C75rBegLnW5hW_ng_-OAq0NeDwxv_IQ9pRMX25Cseg',
+   'https://kbvysscultderkfqjchl.supabase.co/storage/v1/object/sign/catatlo/ACCESSORI%20UOMO/GUCCI%20BORSELLO%20LGBT/cckbj6k9twesmyntnt4z.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV85Y2IyNjNhYi0zNjAwLTQ0ZjgtYTNlYS1jNjU3ZjBkZmJiYzMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXRhdGxvL0FDQ0VTU09SSSBVT01PL0dVQ0NJIEJPUlNFTExPIExHQlQvY2NrYmo2azl0d2VzbXludG50NHoud2VicCIsImlhdCI6MTc2Mjk4MTk0MSwiZXhwIjoyMDc4MzQxOTQxfQ.zqLHqbQLVHhc4rrvEO08--ASL4A-5rZabkB7u1-0XkU'
+    ],
+    sizes: ['']
+  },
+];

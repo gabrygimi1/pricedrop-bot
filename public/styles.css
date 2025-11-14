@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  background-color: #0f0f0f;
+  color: #fff;
+  font-family: "Poppins", Arial, sans-serif;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  margin: auto;
+  max-width: 420px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 0.6rem 0 0.2rem;
+  color: #f1f1f1;
+  max-width: 90%;
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+.category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.category {
+  background: #1b1b1b;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  width: 75%;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.category:hover {
+  background: #292929;
+  transform: scale(1.04);
+}
+
+.gallery-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.product {
+  background: #141414;
+  border-radius: 16px;
+  padding: 0.8rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.arrow.left {
+  left: 8px;
+}
+
+.arrow.right {
+  right: 8px;
+}
+
+.arrow:hover {
+  opacity: 0.7;
+}
+
+.sizes {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+#backButton {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e1e1e;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 999;
+  opacity: 0.9;
+}
+
+#backButton:hover {
+  background: #333;
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  .category {
+    width: 85%;
+    font-size: 0.9rem;
+  }
+  .gallery-container {
+    gap: 2rem;
+  }
+}
