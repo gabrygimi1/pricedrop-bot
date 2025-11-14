@@ -24,7 +24,7 @@ const bot = new TelegramBot(token, { polling: true });
 bot.on("message", (msg) => {
   const chatId = msg.chat.id;
 
-  bot.sendMessage(chatId, "Apri il catalogo 👇", {
+  bot.sendMessage(chatId, "Apri il catalogo 👇\nOpen the catalog 👇", {
     reply_markup: {
       inline_keyboard: [
         [
